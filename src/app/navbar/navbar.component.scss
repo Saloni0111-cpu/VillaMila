@@ -1,0 +1,123 @@
+.nav {
+  	position: absolute;
+  	top: calc(50% - 17.5px);
+  	left: 25.125rem;
+  	display: flex;
+  	align-items: center;
+  	gap: 3.375rem;
+}
+.home-wrapper {
+  	backdrop-filter: blur(20px);
+  	border-bottom: 2px solid #d9b56c;
+  	display: flex;
+  	align-items: flex-start;
+  	padding: 0.5rem 0rem;
+  	color: #111;
+}
+.home {
+  	position: relative;
+  	line-height: 1.5rem;
+  	font-weight: 600;
+}
+.explore-wrapper {
+  	backdrop-filter: blur(20px);
+  	display: flex;
+  	align-items: flex-start;
+  	padding: 0.5rem 0rem;
+}
+.explore {
+  	position: relative;
+  	line-height: 1.5rem;
+  	font-weight: 500;
+}
+.nav2 {
+  	position: absolute;
+  	top: calc(50% - 21.5px);
+  	right: 6.125rem;
+  	display: flex;
+  	align-items: center;
+  	justify-content: flex-end;
+  	gap: 1.5rem;
+}
+.list-your-property-wrapper {
+  	backdrop-filter: blur(20px);
+  	border-radius: 999px;
+  	border: 1px solid #2a2927;
+  	display: flex;
+  	align-items: flex-start;
+  	padding: 0.75rem 1.25rem;
+}
+.login-signup-wrapper {
+  	backdrop-filter: blur(20px);
+  	border-radius: 999px;
+  	background-color: #2a2927;
+  	display: flex;
+  	align-items: flex-start;
+  	padding: 0.75rem 1.25rem;
+  	cursor: pointer;
+  	color: #fff;
+}
+
+@media (max-width: 992px) {
+  .custom-nav {
+    left: 2rem;
+    gap: 2rem;
+  }
+
+  .nav2 {
+    right: 2rem;
+    gap: 1rem;
+  }
+
+  .home,
+  .explore {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-nav {
+    position: static;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    gap: 1.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .nav2 {
+    position: static;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+  }
+
+  .home-wrapper,
+  .explore-wrapper {
+    padding: 0.4rem 0;
+  }
+
+  .list-your-property-wrapper,
+  .login-signup-wrapper {
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-nav {
+    gap: 1rem;
+  }
+
+  .home,
+  .explore {
+    font-size: 0.85rem;
+  }
+
+  .list-your-property-wrapper {
+    display: none;
+  }
+
+  .login-signup-wrapper {
+    padding: 0.5rem 0.9rem;
+  }
+}
