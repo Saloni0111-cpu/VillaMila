@@ -1,0 +1,93 @@
+.component-1 {
+  position: relative;
+  /* Removed absolute positioning */
+  margin: 2rem auto;
+  /* Center horizontally and add vertical spacing */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+  /* Stronger black shadow */
+  border-radius: 100px;
+  background-color: #fff;
+  width: 70.75rem;
+  height: 6rem;
+  max-width: 65%;
+  /* Ensure responsiveness */
+  padding: 0 1rem 0 0;
+  gap: 0.937rem;
+  font-size: 1.125rem;
+  top: auto;
+}
+
+.frame-parent28 {
+  display: flex;
+  align-items: center;
+}
+
+
+.location-marker-parent,
+.calendar-parent,
+.user-add-parent {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.75rem 2.375rem;
+  gap: 0.875rem;
+}
+
+.inbox-icon {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #000;
+  padding: 1rem;
+  /* Space for the icon inside the circle */
+  object-fit: contain;
+}
+
+
+
+@media (max-width: 992px) {
+  .component-1 {
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .location-marker-parent,
+  .calendar-parent,
+  .user-add-parent {
+    padding: 1.25rem 1.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .component-1 {
+    position: static;
+    flex-direction: column;
+    border-radius: 24px;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .frame-parent28 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .location-marker-parent,
+  .calendar-parent,
+  .user-add-parent {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 16px;
+    background: #f9f9f9;
+  }
+
+  .frame-child62 {
+    display: none;
+  }
+
+  #inbox {
+    align-self: center;
+  }
+}
