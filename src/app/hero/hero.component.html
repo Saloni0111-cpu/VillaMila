@@ -1,65 +1,71 @@
-<!-- Hero Section Wrapper -->
-<div class="hero-container d-flex align-items-end justify-content-center position-relative pb-5 mt-4 mx-auto" style="width: 95%; background-image: url('assets/hero.png'); background-size: cover; background-position: center; min-height: 85vh; border-radius: 50px; overflow: hidden;">
 
-  <!-- Overlay (Optional, for better text visibility if needed) -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.3);"></div>
+<div class="hero-wrapper position-relative">
+  <div class="hero-container d-flex align-items-end justify-content-center position-relative pb-5" style="background-image: url('assets/hero.png'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+
+    <!-- Overlay (Optional, for better text visibility if needed) -->
+    <div class="position-absolute top-5 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.3);"></div>
+  </div>
 
   <!-- Search Bar Component -->
-  <div class="component-1 d-flex align-items-center justify-content-between position-relative " style="z-index: 3;">
+  <div class="component-1 d-flex align-items-center" style="z-index: 3;">
   
-    <div class="frame-parent28 d-flex align-items-center flex-wrap">
+    <div class="frame-parent28 d-flex align-items-center justify-content-between flex-wrap w-100">
   
       <!-- Location -->
-      <div class="location-marker-parent d-flex align-items-start">
-        <img class="location-marker-icon" src="assets/Location marker.svg" alt="Location" /> <!-- Corrected src if needed -->
+      <div class="location-marker-parent d-flex align-items-center gap-3 p-3 pe-3 border-end border-secondary-subtle">
+  <img class="location-marker-icon" src="assets/Location marker.svg" alt="Location" />
+
+  <div class="w-100">
+    <div class="fw-bold text-nowrap overflow-hidden text-truncate">
+      Location / Villas / Farmhouse
+    </div>
+    <div class="small-text text-secondary">Where are you going?</div>
+  </div>
+</div>
+
+
   
-        <div class="locationvillasfarmhouse-parent">
-          <div class="locationvillasfarmhouse">Location/Villas/Farmhouse</div>
-          <div class="where-are-you">Where are you going?</div>
-        </div>
-      </div>
-  
-      <div class="frame-child62 d-none d-md-block"></div>
+      <div class="vr d-none d-md-block mx-2" style="height: 30px;"></div>
   
       <!-- Check in -->
-      <div class="calendar-parent d-flex align-items-start">
+      <div class="calendar-parent d-flex align-items-center gap-3 p-3">
         <img class="location-marker-icon" src="assets/Calendar.svg" alt="Calendar" /> <!-- Corrected src if needed -->
   
         <div class="locationvillasfarmhouse-parent">
-          <div class="locationvillasfarmhouse">Check in</div>
-          <div class="where-are-you">Add date</div>
+          <div class="locationvillasfarmhouse fw-bold">Check in</div>
+          <div class="small-text where-are-you text-secondary fw-light small">Add date</div>
         </div>
       </div>
   
-      <div class="frame-child62 d-none d-md-block"></div>
+      <div class="vr d-none d-md-block mx-2" style="height: 30px;"></div>
   
       <!-- Check out -->
-      <div class="calendar-parent d-flex align-items-start">
+      <div class="calendar-parent d-flex align-items-center gap-3 p-3">
         <img class="location-marker-icon" src="assets/Calendar.svg" alt="Calendar" /> <!-- Corrected src if needed -->
   
         <div class="locationvillasfarmhouse-parent">
-          <div class="locationvillasfarmhouse">Check out</div>
-          <div class="where-are-you">Add date</div>
+          <div class="locationvillasfarmhouse fw-bold">Check out</div>
+          <div class="small-text where-are-you text-secondary fw-light small">Add date</div>
         </div>
       </div>
   
-      <div class="frame-child62 d-none d-md-block"></div>
+      <div class="vr d-none d-md-block mx-2" style="height: 30px;"></div>
   
       <!-- Guests -->
-      <div class="user-add-parent d-flex align-items-start">
-        <img class="location-marker-icon" src="assets/User add.svg" alt="Guests" /> <!-- Corrected src if needed -->
-  
-        <div class="locationvillasfarmhouse-parent">
-          <div class="locationvillasfarmhouse">Guests</div>
-          <div class="guest-1-room">2 guest, 1 Room</div>
-        </div>
+      <div class="user-add-parent d-flex align-items-center gap-3 p-3 pe-3 border-end-light">
+  <img class="location-marker-icon" src="assets/User add.svg" alt="Guests" />
+
+  <div class="locationvillasfarmhouse-parent">
+    <div class="locationvillasfarmhouse fw-bold">Guests</div>
+    <div class="small-text guest-1-room">2 guest, 1 Room</div>
+  </div>
+
+
+        <!-- Search Icon (Moved Here) -->
+        <img class="inbox-icon ms-3" src="assets/Search.svg" alt="Search" id="inbox" />
       </div>
 
-      <!-- Search Icon -->
-      <img class="inbox-icon ms-2 " src="assets/Search.svg" alt="Search" id="inbox" /> <!-- Assuming Search.svg exists based on file list -->
-  
     </div>
   
   </div>
-
 </div>
