@@ -1,0 +1,10 @@
+.filter-btn {
+    border: 1px solid #858585 !important;
+    /* Standard Bootstrap gray border */
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        border-color: #adb5bd !important;
+        background-color: #f8f9fa !important;
+    }
+}
