@@ -1,150 +1,77 @@
-.hero-wrapper {
-  height: 80vh;
-  overflow: hidden;
-}
-
-.upscalemedia-transformed-1-parent {
-  position: relative;
-  top: 0rem;
-  left: 0rem;
-  background-color: #fff;
-  width: 100%;
-  height: 6.438rem;
-  font-size: 1rem;
-  color: #757575;
-  z-index: 10;
-}
-
-.upscalemedia-transformed-1-icon {
-  position: absolute;
-  top: 50%;
-  left: 4rem;
-  transform: translateY(-50%);
-  width: 6rem;
-  /* Adjust as needed */
+/* Logo Sizing & Cleanup */
+.logo-img {
+  width: 8rem;
+  /* Adjusted size for better balance */
   height: auto;
   object-fit: cover;
-}
-
-.hero-img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: -1;
-}
-
-.navbar {
-  z-index: 2;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 25.125rem;
-  display: flex;
-  align-items: center;
-  gap: 3.375rem;
-}
-
-// ... existing code ...
-.nav2 {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 6.125rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1.5rem;
-}
-
-.list-your-property-wrapper {
-  backdrop-filter: blur(20px);
-  border-radius: 999px;
-  border: 1px solid #2a2927;
-  display: flex;
-  align-items: flex-start;
-  padding: 0.75rem 1.25rem;
-}
-
-.login-signup-wrapper {
-  backdrop-filter: blur(20px);
-  border-radius: 999px;
-  background-color: #2a2927;
-  display: flex;
-  align-items: flex-start;
-  padding: 0.75rem 1.25rem;
+/* Nav Link Styling */
+.nav-link {
+  color: #555 !important;
   cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+
+  &:hover {
+    color: #000000 !important;
+    text-decoration: underline #c4a61d;
+    text-underline-offset: 0.5rem;
+  }
+}
+
+/* Custom Button Styles */
+.btn-outline-custom {
+  border: 1px solid #2a2927;
+  color: #2a2927;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+
+  &:hover {
+    background-color: #2a2927;
+    color: #fff;
+  }
+}
+
+.btn-custom {
+  background-color: #2a2927;
   color: #fff;
-}
+  border: 1px solid #2a2927;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
 
-@media (max-width: 992px) {
-  .custom-nav {
-    left: 2rem;
-    gap: 2rem;
-  }
-
-  .nav2 {
-    right: 2rem;
-    gap: 1rem;
-  }
-
-  .home,
-  .explore {
-    font-size: 0.95rem;
+  &:hover {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
   }
 }
 
-@media (max-width: 768px) {
-  .custom-nav {
-    position: static;
+
+
+/* Media Query Adjustments */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #fff;
+    padding: 1rem 0;
+  }
+
+  .logo-img {
+    width: 6rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: center !important;
     width: 100%;
-    padding: 0.75rem 1rem;
-    gap: 1.5rem;
-    overflow-x: auto;
-    white-space: nowrap;
   }
 
-  .nav2 {
-    position: static;
+  .d-flex.align-items-center.gap-3 {
+    justify-content: center;
     width: 100%;
-    padding: 0.75rem 1rem;
-    justify-content: space-between;
-  }
-
-  .home-wrapper,
-  .explore-wrapper {
-    padding: 0.4rem 0;
-  }
-
-  .list-your-property-wrapper,
-  .login-signup-wrapper {
-    padding: 0.6rem 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .custom-nav {
-    gap: 1rem;
-  }
-
-  .home,
-  .explore {
-    font-size: 0.85rem;
-  }
-
-  .list-your-property-wrapper {
-    display: none;
-  }
-
-  .login-signup-wrapper {
-    padding: 0.5rem 0.9rem;
   }
 }

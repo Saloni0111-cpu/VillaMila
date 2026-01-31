@@ -1,71 +1,71 @@
-
-<div class="hero-wrapper position-relative">
-  <div class="hero-container d-flex align-items-end justify-content-center position-relative pb-5" style="background-image: url('assets/hero.png'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
-
-    <!-- Overlay (Optional, for better text visibility if needed) -->
-    <div class="position-absolute top-5 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.3);"></div>
-  </div>
-
-  <!-- Search Bar Component -->
-  <div class="component-1 d-flex align-items-center" style="z-index: 3;">
-  
-    <div class="frame-parent28 d-flex align-items-center justify-content-between flex-wrap w-100">
-  
-      <!-- Location -->
-      <div class="location-marker-parent d-flex align-items-center gap-3 p-3 pe-3 border-end border-secondary-subtle">
-  <img class="location-marker-icon" src="assets/Location marker.svg" alt="Location" />
-
-  <div class="w-100">
-    <div class="fw-bold text-nowrap overflow-hidden text-truncate">
-      Location / Villas / Farmhouse
+<section class="hero-wrapper position-relative mb-5">
+  <!-- Hero Main Box -->
+  <div class="hero-container mx-auto mt-4 rounded-5 overflow-hidden position-relative d-flex align-items-end justify-content-center"
+       style="background-image: url('assets/hero.png'); background-size: cover; background-position: center; min-height: 85vh; width: 85%;">
+    
+    <!-- Dark Overlay -->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.3); z-index: 1;"></div>
+    
+    <!-- Optional: Add Hero Content here if needed -->
+    <div class="position-relative w-100 pb-5 mb-5 text-center" style="z-index: 2;">
+       <!-- Text could go here -->
     </div>
-    <div class="small-text text-secondary">Where are you going?</div>
   </div>
-</div>
 
-
-  
-      <div class="vr d-none d-md-block mx-2" style="height: 30px;"></div>
-  
-      <!-- Check in -->
-      <div class="calendar-parent d-flex align-items-center gap-3 p-3">
-        <img class="location-marker-icon" src="assets/Calendar.svg" alt="Calendar" /> <!-- Corrected src if needed -->
-  
-        <div class="locationvillasfarmhouse-parent">
-          <div class="locationvillasfarmhouse fw-bold">Check in</div>
-          <div class="small-text where-are-you text-secondary fw-light small">Add date</div>
+  <!-- Search Bar Component (Overlapping the bottom) -->
+  <div class="search-bar-wrap w-100 d-flex justify-content-center px-3" style="z-index: 10;">
+    <div class="search-bar-pill bg-white shadow-lg rounded-pill d-flex flex-column flex-lg-row align-items-center w-auto max-width-100 px-2 py-1 py-lg-0">
+      
+      <!-- Location Segment -->
+      <div class="search-item d-flex align-items-center gap-3 px-4 py-3 border-end-lg">
+        <img class="icon-2rem" src="assets/Location marker.svg" alt="Location" />
+        <div class="text-start">
+          <div class="fw-bold text-nowrap">Location / Villas / Farmhouse</div>
+          <div class="small text-secondary fw-light">Where are you going?</div>
         </div>
       </div>
-  
-      <div class="vr d-none d-md-block mx-2" style="height: 30px;"></div>
-  
-      <!-- Check out -->
-      <div class="calendar-parent d-flex align-items-center gap-3 p-3">
-        <img class="location-marker-icon" src="assets/Calendar.svg" alt="Calendar" /> <!-- Corrected src if needed -->
-  
-        <div class="locationvillasfarmhouse-parent">
-          <div class="locationvillasfarmhouse fw-bold">Check out</div>
-          <div class="small-text where-are-you text-secondary fw-light small">Add date</div>
+
+      <!-- Divider (Mobile: Hidden, Desktop: Vertical Line) -->
+      <div class="vr d-none d-lg-block my-3 text-secondary opacity-25"></div>
+
+      <!-- Check In Segment -->
+      <div class="search-item d-flex align-items-center gap-3 px-4 py-3">
+        <img class="icon-2rem" src="assets/Calendar.svg" alt="Calendar" />
+        <div class="text-start">
+          <div class="fw-bold text-nowrap">Check in</div>
+          <div class="small text-secondary fw-light">Add date</div>
         </div>
       </div>
-  
-      <div class="vr d-none d-md-block mx-2" style="height: 30px;"></div>
-  
-      <!-- Guests -->
-      <div class="user-add-parent d-flex align-items-center gap-3 p-3 pe-3 border-end-light">
-  <img class="location-marker-icon" src="assets/User add.svg" alt="Guests" />
 
-  <div class="locationvillasfarmhouse-parent">
-    <div class="locationvillasfarmhouse fw-bold">Guests</div>
-    <div class="small-text guest-1-room">2 guest, 1 Room</div>
-  </div>
+      <!-- Divider -->
+      <div class="vr d-none d-lg-block my-3 text-secondary opacity-25"></div>
 
+      <!-- Check Out Segment -->
+      <div class="search-item d-flex align-items-center gap-3 px-4 py-3">
+        <img class="icon-2rem" src="assets/Calendar.svg" alt="Calendar" />
+        <div class="text-start">
+          <div class="fw-bold text-nowrap">Check out</div>
+          <div class="small text-secondary fw-light">Add date</div>
+        </div>
+      </div>
 
-        <!-- Search Icon (Moved Here) -->
-        <img class="inbox-icon ms-3" src="assets/Search.svg" alt="Search" id="inbox" />
+      <!-- Divider -->
+      <div class="vr d-none d-lg-block my-3 text-secondary opacity-25"></div>
+
+      <!-- Guests Segment -->
+      <div class="search-item d-flex align-items-center gap-3 px-4 py-3 position-relative">
+        <img class="icon-2rem" src="assets/User add.svg" alt="Guests" />
+        <div class="text-start pe-5">
+          <div class="fw-bold text-nowrap">Guests</div>
+          <div class="small text-secondary fw-light">2 guest, 1 Room</div>
+        </div>
+
+        <!-- Search Submit Button -->
+        <div class="search-submit ms-3 bg-black rounded-circle d-flex align-items-center justify-content-center position-absolute end-0 me-2">
+          <img src="assets/Search.svg" alt="Search" class="img-fluid p-2" />
+        </div>
       </div>
 
     </div>
-  
   </div>
-</div>
+</section>
