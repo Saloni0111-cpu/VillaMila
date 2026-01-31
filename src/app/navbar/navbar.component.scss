@@ -1,7 +1,7 @@
-/* Logo Sizing & Cleanup */
+
 .logo-img {
   width: 8rem;
-  /* Adjusted size for better balance */
+
   height: auto;
   object-fit: cover;
   border: none !important;
@@ -10,7 +10,6 @@
 }
 
 
-/* Nav Link Styling */
 .nav-link {
   color: #555 !important;
   cursor: pointer;
@@ -24,7 +23,6 @@
   }
 }
 
-/* Custom Button Styles */
 .btn-outline-custom {
   border: 1px solid #2a2927;
   color: #2a2927;
@@ -51,9 +49,6 @@
   }
 }
 
-
-
-/* Media Query Adjustments */
 @media (max-width: 991.98px) {
   .navbar-collapse {
     background: #fff;
