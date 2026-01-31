@@ -46,12 +46,13 @@ $bg-light: #faf8f5;
 
 	&.end-0 {
 		transform: translate(50%, -50%);
-	 
+
 	}
 }
 
 .destinations-grid {
 	scrollbar-width: none;
+
 	&::-webkit-scrollbar {
 		display: none;
 	}
@@ -80,6 +81,22 @@ $bg-light: #faf8f5;
 }
 
 
+.promo-list {
+	list-style-type: disc;
+	padding-left: 1.5rem;
+	font-size: 1rem;
+	font-weight: 500;
+
+	li {
+		margin-bottom: 0.25rem;
+
+		&::marker {
+			color: white;
+			/* Brighten markers for the dark banner bg */
+			font-size: 1rem;
+		}
+	}
+}
 
 @media (max-width: 991.98px) {
 	.section-header {
