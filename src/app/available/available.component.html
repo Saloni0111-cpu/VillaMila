@@ -7,74 +7,164 @@
             <div class="section-header mb-4">
                 <h2 class="fw-bold h2 mb-1">Available This Weekend</h2>
                 <div class="btn-container d-flex gap-3 mt-4">
-                    <button class="btn btn-white filter-btn rounded-pill px-4 py-2 fw-bold">All</button>
-                    <button class="btn btn-white filter-btn rounded-pill px-4 py-2 fw-bold"> Udaipur</button>
-                    <button class="btn btn-white filter-btn rounded-pill px-4 py-2 fw-bold"> Manali</button>
-                    <button class="btn btn-white filter-btn rounded-pill px-4 py-2 fw-bold"> Coorg</button>
-                    <button class="btn btn-white filter-btn rounded-pill px-4 py-2 fw-bold"> Ooty</button>
-                    <button class="btn btn-white filter-btn rounded-pill px-4 py-2 fw-bold"> Explore More</button>
+                    <button class="btn btn-white filter-btn rounded-pill px-4 py-2 fw-bold"
+                        *ngFor="let location of locations" [class.active]="selectedLocation === location"
+                        (click)="selectLocation(location)">
+                        {{ location }}
+                    </button>
+
+
                 </div>
             </div>
 
             <div class="carousel-wrapper">
                 <button class="btn btn-sm btn-light shadow-sm position-absolute start-0 top-50 z-3 carousel-arrow"
                     aria-label="Previous">
-                    <i class="bi bi-chevron-left text-dark">
-                        <</i>
+                    <span class="carousel-control-prev-icon"></span>
                 </button>
 
                 <button class="btn btn-sm btn-light shadow-sm position-absolute end-0 top-50 z-3 carousel-arrow"
                     aria-label="Next">
-                    <i class="bi bi-chevron-right text-dark">></i>
+                    <span class="carousel-control-next-icon"></span>
                 </button>
-                <div class="card border-0 shadow-sm rounded-4" style="width: 18rem;">
-                    <!-- Image Wrapper -->
-                    <div class="position-relative">
-                        <img src="assets/lonavala.webp" class="card-img-top rounded-4" alt="Villa"
-                            style="height: 18rem; object-fit: cover;">
+                <div class="row g-4 mt-2">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6" *ngFor="let villa of filteredVillas">
+                        <div class="card border-0 shadow-sm rounded-4 h-100">
+                            <!-- Image Wrapper -->
+                            <div class="position-relative">
+                                <img [src]="villa.image" class="card-img-top rounded-4" [alt]="villa.name"
+                                    style="height: 18rem; object-fit: cover;">
 
-                        <!-- Rating Badge -->
-                        <span
-                            class="badge bg-light text-dark position-absolute top-0 start-0 m-3 rounded-pill px-3 py-2 d-flex align-items-center gap-1"
-                            style="backdrop-filter: blur(10px);">
-                            ⭐ 4.0
-                        </span>
+                                <!-- Rating Badge -->
+                                <span
+                                    class="badge bg-light text-dark position-absolute top-0 start-0 m-3 rounded-pill px-3 py-2 d-flex align-items-center gap-1"
+                                    style="backdrop-filter: blur(10px);">
+                                    ⭐ {{ villa.rating }}
+                                </span>
 
-                        <!-- Wishlist Icon -->
-                        <button
-                            class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3 p-2 d-flex align-items-center justify-content-center"
-                            style="width: 40px; height: 40px;">
-                            <i class="bi bi-heart" style="font-size: 1.2rem;"></i>
-                        </button>
+                                <!-- Wishlist Icon -->
+                                <button
+                                    class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3 p-2 d-flex align-items-center justify-content-center"
+                                    style="width: 40px; height: 40px;">
+                                    <i class="bi bi-heart" style="font-size: 1.2rem;"></i>
+                                </button>
+                            </div>
+
+                            <!-- Card Body -->
+                            <div class="card-body px-2 pt-3">
+                                <h5 class="fw-semibold mb-1">{{ villa.name }}</h5>
+
+                                <!-- Location -->
+                                <div class="d-flex align-items-center text-muted small mb-2">
+                                    <i class="bi bi-geo-alt me-1"></i>
+                                    {{ villa.location }}
+                                </div>
+
+                                <!-- Details -->
+                                <div class="d-flex align-items-center text-muted small gap-2 mb-3">
+                                    <span>Upto {{ villa.guests }} Guests</span>
+                                    <span>•</span>
+                                    <span>{{ villa.rooms }} Rooms</span>
+                                    <span>•</span>
+                                    <span>{{ villa.baths }} Baths</span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="text-decoration-line-through text-muted small">₹{{ villa.originalPrice
+                                        | number }}</span>
+                                    <span class="fw-bold fs-5" style="color: rgba(105, 27, 27, 0.55);">₹{{
+                                        villa.discountedPrice | number }}</span>
+                                    <span class="text-muted small">/ night</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Card Body -->
-                    <div class="card-body px-2 pt-3">
+        </section>
+    </div>
+</div>
 
-                        <h5 class="fw-semibold mb-1">The Grey Medley</h5>
+<div class="explore-wrapper bg-white py-5">
+    <div class="container-xl px-4">
 
-                        <!-- Location -->
-                        <div class="d-flex align-items-center text-muted small mb-2">
-                            <i class="bi bi-geo-alt me-1"></i>
-                            Lonavala, Maharashtra
+
+        <section class="available-wrapper mb-5  position-relative">
+
+            <div class="section-header mb-4">
+                <h2 class="fw-bold h2 mb-1">Top Rated Villas</h2>
+                <div class="btn-container d-flex gap-3 mt-4">
+                    <button class="btn btn-white filter-btn rounded-pill px-4 py-2 fw-bold"
+                        *ngFor="let location of locations" [class.active]="selectedLocation === location"
+                        (click)="selectLocation(location)">
+                        {{ location }}
+                    </button>
+                </div>
+            </div>
+
+            <div class="carousel-wrapper">
+                <button class="btn btn-sm btn-light shadow-sm position-absolute start-0 top-50 z-3 carousel-arrow"
+                    aria-label="Previous">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="btn btn-sm btn-light shadow-sm position-absolute end-0 top-50 z-3 carousel-arrow"
+                    aria-label="Next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="row g-4 mt-2">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6" *ngFor="let villa of topRatedVillas">
+                        <div class="card border-0 shadow-sm rounded-4 h-100">
+                            <!-- Image Wrapper -->
+                            <div class="position-relative">
+                                <img [src]="villa.image" class="card-img-top rounded-4" [alt]="villa.name"
+                                    style="height: 18rem; object-fit: cover;">
+
+                                <!-- Rating Badge -->
+                                <span
+                                    class="badge bg-light text-dark position-absolute top-0 start-0 m-3 rounded-pill px-3 py-2 d-flex align-items-center gap-1"
+                                    style="backdrop-filter: blur(10px);">
+                                    ⭐ {{ villa.rating }}
+                                </span>
+
+                                <!-- Wishlist Icon -->
+                                <button
+                                    class="btn btn-light rounded-circle position-absolute top-0 end-0 m-3 p-2 d-flex align-items-center justify-content-center"
+                                    style="width: 40px; height: 40px;">
+                                    <i class="bi bi-heart" style="font-size: 1.2rem;"></i>
+                                </button>
+                            </div>
+
+                            <!-- Card Body -->
+                            <div class="card-body px-2 pt-3">
+                                <h5 class="fw-semibold mb-1">{{ villa.name }}</h5>
+
+                                <!-- Location -->
+                                <div class="d-flex align-items-center text-muted small mb-2">
+                                    <i class="bi bi-geo-alt me-1"></i>
+                                    {{ villa.location }}
+                                </div>
+
+                                <!-- Details -->
+                                <div class="d-flex align-items-center text-muted small gap-2 mb-3">
+                                    <span>Upto {{ villa.guests }} Guests</span>
+                                    <span>•</span>
+                                    <span>{{ villa.rooms }} Rooms</span>
+                                    <span>•</span>
+                                    <span>{{ villa.baths }} Baths</span>
+                                </div>
+
+                                <!-- Price -->
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="text-decoration-line-through text-muted small">₹{{ villa.originalPrice
+                                        | number }}</span>
+                                    <span class="fw-bold fs-5 text-warning">₹{{ villa.discountedPrice | number }}</span>
+                                    <span class="text-muted small">/ night</span>
+                                </div>
+                            </div>
                         </div>
-
-                        <!-- Details -->
-                        <div class="d-flex align-items-center text-muted small gap-2 mb-3">
-                            <span>Upto 10 Guests</span>
-                            <span>•</span>
-                            <span>4 Rooms</span>
-                            <span>•</span>
-                            <span>2 Baths</span>
-                        </div>
-
-                        <!-- Price -->
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="text-decoration-line-through text-muted small">₹3,999</span>
-                            <span class="fw-bold fs-5 text-warning">₹2,999</span>
-                            <span class="text-muted small">/ night</span>
-                        </div>
-
                     </div>
                 </div>
             </div>
