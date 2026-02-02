@@ -1,0 +1,104 @@
+<div class="explore-wrapper bg-white py-5">
+    <div class="container-xl px-4">
+        <section class="collection-wrapper mb-5 position-relative">
+            <div class="section-header mb-4">
+                <h1 class="fw-bold mb-1">Explore By Collection</h1>
+                <p class="text-secondary small">
+                    Discover great places and find your next unforgettable getaway.
+                </p>
+            </div>
+
+            <div class="carousel-wrapper">
+                <button class="btn btn-sm btn-light shadow-sm position-absolute start-0 top-50 z-3 carousel-arrow"
+                    aria-label="Previous">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="btn btn-sm btn-light shadow-sm position-absolute end-0 top-50 z-3 carousel-arrow"
+                    aria-label="Next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+                <div class="row g-4">
+                    <!-- Collection Items -->
+                    <div class="col-lg-3 col-md-6" *ngFor="let item of collections">
+                        <div class="collection-item position-relative overflow-hidden rounded-4 shadow-sm h-100">
+                            <img [src]="item.image" class="img-fluid rounded-4 w-100" [alt]="item.title"
+                                style="height: 250px; object-fit: cover;">
+                            <div class="item-overlay text-white text-start rounded-2">
+                                <h6 class="fw-bold mb-0">{{ item.title }}</h6>
+                                <p class="small mb-0 opacity-75 ">{{ item.count }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination/Dots -->
+            <div class="d-flex justify-content-center mt-3">
+                <div class="dot-container bg-light rounded-pill p-1 d-flex gap-1">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<!--Blogs Design-->
+<div class="explore-wrapper bg-white py-5">
+    <div class="container-xl px-4">
+        <section class="collection-wrapper mb-5 position-relative">
+            <div class="section-header mb-4">
+                <h1 class="fw-bold mb-1">Blogs</h1>
+                <p class="text-secondary small">
+                    Discover great places and find your next unforgettable getaway.
+                </p>
+            </div>
+
+            <div class="carousel-wrapper">
+                <button class="btn btn-sm btn-light shadow-sm position-absolute start-0 top-50 z-3 carousel-arrow"
+                    aria-label="Previous">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="btn btn-sm btn-light shadow-sm position-absolute end-0 top-50 z-3 carousel-arrow"
+                    aria-label="Next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+                <div class="row g-4">
+                    <!-- Blog Items -->
+                    <div class="col-lg-4 col-md-6" *ngFor="let item of blogs">
+                        <div class="blog-item position-relative overflow-hidden rounded-4 h-100 bg-white">
+                            <img [src]="item.image" class="img-fluid rounded-4 w-100" [alt]="item.title"
+                                style="height: 250px; object-fit: cover;">
+                            <div class="item-body p-3 text-start">
+                                <p class="small mb-1 text-primary fw-medium">{{ item.duration }}</p>
+                                <h6 class="fw-bold mb-2 text-dark">{{ item.title }}</h6>
+                                <p class="small mb-0 text-secondary lh-base">{{ item.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination/Dots -->
+            <div class="d-flex justify-content-center mt-3">
+                <div class="dot-container bg-light rounded-pill p-1 d-flex gap-1">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
