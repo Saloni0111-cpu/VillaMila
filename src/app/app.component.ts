@@ -5,12 +5,13 @@ import { HeroComponent } from './hero/hero.component';
 import { ExploreComponent } from './explore/explore.component';
 import { AvailableComponent } from './available/available.component';
 import { WhyUsComponent } from './why-us/why-us.component';
-  import { CollectionComponent } from './collection/collection.component';
+import { CollectionComponent } from './collection/collection.component';
+  import { ReviewComponent } from './review/review.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HeroComponent, ExploreComponent, AvailableComponent, WhyUsComponent, CollectionComponent],
+  imports: [RouterOutlet, NavbarComponent, HeroComponent, ExploreComponent, AvailableComponent, WhyUsComponent, CollectionComponent, ReviewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

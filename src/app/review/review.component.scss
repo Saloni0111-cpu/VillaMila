@@ -1,0 +1,78 @@
+$gold: #d9b56c;
+$bg-light: #faf8f5;
+$bg-dark: #2a2927;
+$text-muted: #757575;
+
+.why-us-section {
+    background-color: $bg-light;
+    overflow: hidden;
+    position: relative;
+
+
+    .decorative-vector-v1 {
+        bottom: 10%;
+        left: 10%;
+        width: 400px;
+        opacity: 0.15;
+        transform: rotate(-15deg);
+    }
+
+    .text-gold {
+        color: $gold;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        color: #1a1a1a;
+        line-height: 1.25;
+    }
+
+    .leading-relaxed {
+        line-height: 1.75;
+    }
+
+    .image-stack {
+        height: 400px;
+        width: 100%;
+
+        .img-main {
+            position: absolute;
+            top: 0;
+            left: 2rem;
+            width: calc(100% - 2rem);
+            height: 500px;
+            object-fit: cover;
+            z-index: 2;
+            border-radius: 40px !important;
+            border: 2.5px solid rgba($gold, 0.3) !important;
+        }
+
+        .text-sub {
+            position: absolute;
+            bottom: -50px;
+            left: 30rem;
+            width: 65%;
+            padding: 1.5rem;
+            background-color: white;
+            z-index: 3;
+            border: 8px solid $bg-light;
+            border-radius: 20px;
+        }
+
+        .decorative-blob {
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba($gold, 0.1);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            z-index: 1;
+        }
+    }
+
+    
+   
+}
+
