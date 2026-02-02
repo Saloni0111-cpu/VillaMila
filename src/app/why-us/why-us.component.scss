@@ -1,0 +1,103 @@
+$gold: #d9b56c;
+$bg-light: #faf8f5;
+$bg-dark: #2a2927;
+$text-muted: #757575;
+
+.why-us-section {
+    background-color: $bg-light;
+    overflow: hidden;
+
+    .text-gold {
+        color: $gold;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        color: #1a1a1a;
+        line-height: 1.25;
+    }
+
+    .leading-relaxed {
+        line-height: 1.75;
+    }
+
+    .image-stack {
+        height: 600px;
+        width: 100%;
+
+        .img-main {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 75%;
+            height: 550px;
+            object-fit: cover;
+            z-index: 2;
+        }
+
+        .img-sub {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            width: 60%;
+            height: 350px;
+            object-fit: cover;
+            z-index: 3;
+            border: 8px solid $bg-light;
+        }
+
+        .decorative-blob {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 150px;
+            height: 150px;
+            background-color: rgba($gold, 0.1);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            z-index: 1;
+        }
+    }
+
+    .feature-icon-box {
+        width: 65px;
+        height: 65px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        flex-shrink: 0;
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .image-stack {
+            height: 500px;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.stats-section {
+    background-color: $bg-dark;
+
+    .stat-item {
+        h3 {
+            font-size: 3.5rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+        }
+    }
+
+    .border-white-10 {
+        border-color: rgba(255, 255, 255, 0.1) !important;
+    }
+}

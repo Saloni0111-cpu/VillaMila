@@ -4,11 +4,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
 import { ExploreComponent } from './explore/explore.component';
 import { AvailableComponent } from './available/available.component';
+  import { WhyUsComponent } from './why-us/why-us.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HeroComponent, ExploreComponent, AvailableComponent],
+  imports: [RouterOutlet, NavbarComponent, HeroComponent, ExploreComponent, AvailableComponent, WhyUsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
