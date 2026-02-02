@@ -1,3 +1,8 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 <app-hero></app-hero>
-<app-explore></app-explore>
+<app-explore></app-explore> -->
+
+@if(showNavbar){
+    <app-navbar></app-navbar>
+}
+<router-outlet></router-outlet>
