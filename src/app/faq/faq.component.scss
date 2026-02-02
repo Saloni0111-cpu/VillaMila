@@ -1,0 +1,40 @@
+.faq-wrapper {
+    .faq-banner-container {
+        max-width: 67rem;
+        height: 18.125rem;
+
+        .faq-banner-img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .faq-header {
+        h2 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+        }
+
+        p {
+            color: #757575;
+            text-align: center; // Align with frame-parent27 text-align: center
+        }
+    }
+
+    .footer-v2 {
+        .logo-wrapper {
+            .logo {
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+// Media query to handle responsiveness for the fixed height banner
+@media (max-width: 991px) {
+    .faq-wrapper {
+        .faq-banner-container {
+            height: 12rem;
+        }
+    }
+}

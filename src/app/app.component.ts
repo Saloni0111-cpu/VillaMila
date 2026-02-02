@@ -6,12 +6,13 @@ import { ExploreComponent } from './explore/explore.component';
 import { AvailableComponent } from './available/available.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 import { CollectionComponent } from './collection/collection.component';
-  import { ReviewComponent } from './review/review.component';
+import { ReviewComponent } from './review/review.component';
+import { FaqComponent } from './faq/faq.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HeroComponent, ExploreComponent, AvailableComponent, WhyUsComponent, CollectionComponent, ReviewComponent],
+  imports: [RouterOutlet, NavbarComponent, HeroComponent, ExploreComponent, AvailableComponent, WhyUsComponent, CollectionComponent, ReviewComponent, FaqComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
