@@ -1,9 +1,10 @@
-<section class="why-us-section py-5 px-4 px-md-0">
+<section class="why-us-section py-5 px-4 px-md-0 position-relative">
+    <img src="assets/Vector-1.svg" alt="" class="decorative-vector-v1 position-absolute z-3 pe-none">
     <div class="container-xl py-lg-5">
         <div class="row align-items-center g-5">
             <!-- Left: Overlapping Images -->
             <div class="col-lg-6">
-                <div class="image-stack position-relative mb-5 mb-lg-0">
+                <div class="image-stack position-relative mb-2 mb-lg-0">
                     <img src="assets/lonavala.webp" alt="Main Villa" class="img-main rounded-4 shadow-lg">
                     <img src="assets/lonavala.webp" alt="Villa Detail" class="img-sub rounded-4 shadow-lg">
                     <!-- Decorative element for aesthetics -->
@@ -12,22 +13,28 @@
             </div>
 
             <!-- Right: Content & Features -->
-            <div class="col-lg-6">
-                <div class="content-wrapper ps-lg-4">
-                    <span class="badge text-uppercase fw-bold mb-3 text-gold">Why Choose Us</span>
-                    <h2 class="display-5 fw-bold mb-4">Giving The Best & Comfortable Just For You</h2>
-                    <p class="text-muted leading-relaxed mb-5">
+            <div class="col-lg-6 ">
+                <div class="content-wrapper ps-lg-3">
+                    <span class="badge text-uppercase fw-bold mb-1 text-gold">Why Choose Us</span>
+                    <h3 class=" display-5 fw-semibold">
+                        <span class="d-block">Giving The Best & Comfortable</span>
+                        <span class="d-block">Just For You</span>
+                    </h3>
+
+                    <p class="text-muted leading-relaxed mb-2">
                         We provide verified listings, real-time availability, and direct communication, ensuring
                         transparency, reliability, and cost effectiveness for clients.
-                        <br><br>
-                        We handpick every property to ensure it combines comfort, beauty, and trust—so you can focus on
+                        <br>
+                        We handpick every property to ensure it combines comfort, beauty, and trust<br>—so you can focus
+                        on
                         creating memories.
                     </p>
 
                     <div class="feature-list">
                         <div class="feature-item d-flex align-items-center mb-4">
                             <div class="feature-icon-box me-3">
-                                <i class="bi bi-star-fill text-gold"></i>
+                                <img src="assets/human-resources-employee--Streamline-Ultimate-2.svg" alt="Icon"
+                                    class="feature-img-icon">
                             </div>
                             <div>
                                 <h6 class="fw-bold mb-1">Premium guest experience</h6>
@@ -38,7 +45,7 @@
 
                         <div class="feature-item d-flex align-items-center mb-4">
                             <div class="feature-icon-box me-3">
-                                <i class="bi bi-gem text-gold"></i>
+                                <img src="assets/singleBed.svg" alt="Icon" class="feature-img-icon">
                             </div>
                             <div>
                                 <h6 class="fw-bold mb-1">Exclusive Amenities</h6>
@@ -49,7 +56,8 @@
 
                         <div class="feature-item d-flex align-items-center mb-4">
                             <div class="feature-icon-box me-3">
-                                <i class="bi bi-person-fill text-gold"></i>
+                                <img src="assets/human-resources-employee--Streamline-Ultimate-1.svg" alt="Icon"
+                                    class="feature-img-icon">
                             </div>
                             <div>
                                 <h6 class="fw-bold mb-1">Chef Services</h6>
@@ -59,7 +67,8 @@
 
                         <div class="feature-item d-flex align-items-center">
                             <div class="feature-icon-box me-3">
-                                <i class="bi bi-car-front-fill text-gold"></i>
+                                <img src="assets/human-resources-employee--Streamline-Ultimate.svg" alt="Icon"
+                                    class="feature-img-icon">
                             </div>
                             <div>
                                 <h6 class="fw-bold mb-1">Transportation</h6>
@@ -76,23 +85,13 @@
 <!-- Stats Section with Dark Background -->
 <section class="stats-section py-5">
     <div class="container-xl py-5">
-        <div class="row text-center g-4">
-            <div class="col-md-4">
-                <div class="stat-item p-4">
-                    <h3 class="display-4 fw-bold text-white mb-2">10k+</h3>
-                    <p class="lead text-white-50 mb-0">Happy Guest</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="stat-item p-4 border-start border-white-10 border-end border-md-none">
-                    <h3 class="display-4 fw-bold text-white mb-2">500+</h3>
-                    <p class="lead text-white-50 mb-0">Premium Villa</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="stat-item p-4">
-                    <h3 class="display-4 fw-bold text-white mb-2">15+</h3>
-                    <p class="lead text-white-50 mb-0">Destinations</p>
+        <div class="row text-center justify-content-center g-5 ">
+            <div *ngFor="let item of whyUs" class="col-lg-3 col-md-6">
+                <div class="stat-item p-3 d-flex flex-column align-items-center">
+                    <img class="stat-pill-img rounded-pill border border-5 shadow-sm mb-3" [src]="item.image"
+                        alt="Stat Icon">
+                    <h3 class="fw-semibold text-white mb-1 fs-1 mt-4">{{item.quantity}}</h3>
+                    <p class="text-white-50 mb-0 small text-uppercase fw-semibold">{{item.description}}</p>
                 </div>
             </div>
         </div>

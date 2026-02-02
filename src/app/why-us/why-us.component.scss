@@ -6,6 +6,15 @@ $text-muted: #757575;
 .why-us-section {
     background-color: $bg-light;
     overflow: hidden;
+    position: relative;
+
+    .decorative-vector-v1 {
+        bottom: 10%;
+        left: 10%;
+        width: 400px;
+        opacity: 0.15;
+        transform: rotate(-15deg);
+    }
 
     .text-gold {
         color: $gold;
@@ -30,18 +39,19 @@ $text-muted: #757575;
             position: absolute;
             top: 0;
             left: 0;
-            width: 75%;
-            height: 550px;
+            width: 65%;
+            height: 650px;
             object-fit: cover;
             z-index: 2;
         }
 
         .img-sub {
             position: absolute;
-            bottom: 0px;
+            bottom: 40px;
             right: 0px;
-            width: 60%;
-            height: 350px;
+            width: 50%;
+            margin-right: 50px;
+            height: 300px;
             object-fit: cover;
             z-index: 3;
             border: 8px solid $bg-light;
@@ -50,7 +60,7 @@ $text-muted: #757575;
         .decorative-blob {
             position: absolute;
             top: -20px;
-            left: -20px;
+            left: -10px;
             width: 150px;
             height: 150px;
             background-color: rgba($gold, 0.1);
@@ -70,8 +80,10 @@ $text-muted: #757575;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         flex-shrink: 0;
 
-        i {
-            font-size: 1.5rem;
+        .feature-img-icon {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
         }
     }
 
@@ -85,14 +97,35 @@ $text-muted: #757575;
 
 .stats-section {
     background-color: $bg-dark;
+    position: relative;
+    z-index: 10;
+    margin-top: 8rem;
+
+    .row {
+        margin-top: -20rem; // Negative margin to overlap section above
+    }
 
     .stat-item {
-        h3 {
-            font-size: 3.5rem;
+        transition: all 0.3s ease;
+        cursor: default;
+
+        .stat-pill-img {
+            width: 300px;
+            height: 370px;
+            object-fit: cover;
+            border-radius: 100px;
+            border: 6px solid rgba($gold, 0.4);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            letter-spacing: -1px;
         }
 
         p {
-            font-size: 1.25rem;
+            font-size: 0.85rem;
             letter-spacing: 1px;
         }
     }
