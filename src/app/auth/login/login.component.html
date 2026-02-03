@@ -1,17 +1,25 @@
 <div class="auth-page container-fluid">
     <div class="row min-vh-100">
 
+        <div class="col-lg-1 d-none d-lg-block"></div>
+
         <!-- LEFT LOGIN -->
-        <div class="col-lg-6 auth-left">
+        <div class="col-lg-5 auth-left">
             <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+                <img src="../../../assets/logo-for-login.jpeg" alt="Logo" class="auth-logo"/>
+
                 <h1>Login</h1>
                 <p>Login to access your account</p>
 
-                <input type="email" placeholder="Email" formControlName="email" />
+                <div class="float-field">
+                    <input type="email" placeholder=" " formControlName="email" /><label>Email</label>
+                </div>
 
-                <div class="password-field">
-                    <input [type]="showPassword ? 'text' : 'password'" placeholder="Password"
-                        formControlName="password" />
+
+                <div class="float-field password-field">
+                    <input [type]="showPassword ? 'text' : 'password'" placeholder=" "
+                        formControlName="password" /><label>Password</label>
                     <span (click)="showPassword = !showPassword">{{ showPassword ? 'Hide' : 'Show' }}</span>
                 </div>
 
@@ -25,7 +33,7 @@
         </div>
 
         <!-- RIGHT IMAGE -->
-        <div class="col-lg-6 auth-right">
+        <div class="col-lg-5 auth-right">
             <div class="image-card">
                 <div id="authCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner">
@@ -36,6 +44,8 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-lg-1 d-none d-lg-block"></div>
 
     </div>
 </div>
