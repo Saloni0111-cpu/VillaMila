@@ -1,0 +1,131 @@
+.footer-v2 {
+    background-color: #2a2927;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+
+    .footer-links {
+        .features {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.125rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .footer-description {
+        font-size: 1.125rem;
+        line-height: 1.6;
+    }
+
+    .footer-title {
+        font-size: 1.25rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .custom-input-group {
+        background-color: transparent;
+
+        .input-group-text,
+        .form-control {
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            box-shadow: none;
+        }
+
+        .form-control {
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.4);
+            }
+
+            color: #fff;
+        }
+
+        .rounded-pill-start {
+            border-top-left-radius: 50rem !important;
+            border-bottom-left-radius: 50rem !important;
+        }
+
+        .rounded-pill-end {
+            border-top-right-radius: 50rem !important;
+            border-bottom-right-radius: 50rem !important;
+        }
+
+        .btn-warning {
+           margin-top: 4rem;
+           margin-right: 5rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+    }
+
+    .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        transition: all 0.3s ease;
+
+        img {
+            width: 30px; // Control the base size
+            height: 30px;
+            transition: all 0.3s ease;
+            filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5)); // Adds a "bold" stroke effect
+        }
+
+        
+    }
+
+    .copyright {
+        font-size: 1rem;
+        color: #fff;
+    }
+}
+
+// Media Queries for extra polish
+@media (max-width: 767.98px) {
+    .footer-v2 {
+        text-align: center;
+
+        .footer-links {
+            align-items: center !important;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 1rem;
+        }
+
+        .custom-input-group {
+            flex-direction: column;
+            gap: 1rem;
+
+            .input-group-text,
+            .form-control,
+            .btn {
+                border-radius: 50rem !important;
+                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+                width: 100%;
+            }
+
+            .btn {
+                position: relative !important;
+                inset: auto !important;
+                transform: none !important;
+            }
+
+            .input-group-text {
+                display: none; // Hide icon on mobile input-group for cleaner look if stacked
+            }
+
+            .form-control {
+                padding-left: 1.5rem !important;
+            }
+        }
+    }
+}

@@ -8,11 +8,11 @@ import { WhyUsComponent } from './why-us/why-us.component';
 import { CollectionComponent } from './collection/collection.component';
 import { ReviewComponent } from './review/review.component';
 import { FaqComponent } from './faq/faq.component';
-
+import { FooterComponent } from './footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HeroComponent, ExploreComponent, AvailableComponent, WhyUsComponent, CollectionComponent, ReviewComponent, FaqComponent],
+  imports: [RouterOutlet, NavbarComponent, HeroComponent, ExploreComponent, AvailableComponent, WhyUsComponent, CollectionComponent, ReviewComponent, FaqComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
